@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portofolio Profesional Khaerul Fajri - Web Developer & AI Enthusiast">
+    <title>Khaerul Fajri | Profesional Portfolio</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class', // Mengaktifkan mode gelap berbasis class
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            navy: '#1e293b',
+                            blue: '#2563eb',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Glass Navbar: Adaptif untuk Terang & Gelap */
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .dark .glass-nav {
+            background-color: rgba(15, 23, 42, 0.85); /* Slate 900 transparan */
+            border-bottom: 1px solid rgba(51, 65, 85, 0.5); /* Slate 700 */
+        }
+        
+        /* Smooth Transition untuk perubahan warna tema */
+        html, body, div, section, nav, a, p, h1, h2, h3, span, i {
+            transition-property: background-color, border-color, color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 300ms;
+        }
+    </style>
+</head>
+<body class="antialiased bg-slate-50 text-slate-600 dark:bg-slate-950 dark:text-slate-400">
+
+    <nav class="fixed w-full z-50 glass-nav bg-white/90 dark:bg-slate-900/90">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-xl font-bold text-slate-900 dark:text-white tracking-tight">
+                        Khaerul<span class="text-blue-600 dark:text-blue-400">Fajri</span>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-sm font-medium text-slate-600 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400 transition">Beranda</a>
+                    <a href="#about" class="text-sm font-medium text-slate-600 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400 transition">Profil</a>
+                    <a href="#projects" class="text-sm font-medium text-slate-600 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400 transition">Studi Kasus</a>
+                    <a href="#experience" class="text-sm font-medium text-slate-600 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400 transition">Pengalaman</a>
+                    
+                    <button id="theme-toggle" class="p-2 rounded-full text-slate-500 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800 transition focus:outline-none">
+                        <i class="fas fa-moon text-lg" id="theme-icon"></i>
+                    </button>
+
+                    <a href="#contact" class="px-5 py-2.5 bg-slate-900 text-white dark:bg-blue-600 dark:hover:bg-blue-500 text-sm font-medium rounded-md hover:bg-slate-800 transition shadow-sm hover:shadow-md">
+                        Hubungi Saya
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="pt-32 pb-24 bg-white dark:bg-slate-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:flex lg:items-center lg:gap-20">
+                
+                <div class="lg:w-1/2 mb-16 lg:mb-0">
+                    <div class="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-wider text-blue-600 bg-blue-50 border border-blue-100 dark:bg-blue-900/30 dark:text-blue-300 dark:border-blue-800 rounded-full uppercase">
+                        Available for Freelance & Projects
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white leading-loose mb-10">
+                        Mengembangkan <br class="hidden lg:block">
+                        Solusi Web <span class="text-blue-600 dark:text-blue-400">Cerdas</span> & <span class="text-blue-600 dark:text-blue-400">Aman</span>.
+                    </h1>
+
+                    <p class="text-lg text-slate-600 dark:text-slate-400 mb-12 leading-loose">
+                        Saya Khaerul Fajri, mahasiswa Ilmu Komputer semester 5. Saya menggabungkan disiplin teknis akademik dengan keahlian praktis dalam pengembangan web, keamanan siber, dan kecerdasan buatan (AI).
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-5">
+                        <a href="#projects" class="inline-flex justify-center items-center px-8 py-4 text-base font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-500 transition shadow-lg shadow-blue-200 dark:shadow-blue-900/20">
+                            Lihat Karya Saya
+                        </a>
+                        <a href="mailto:emailtuan@gmail.com" class="inline-flex justify-center items-center px-8 py-4 text-base font-medium text-slate-700 bg-white border border-slate-300 rounded-md hover:bg-slate-50 dark:bg-slate-800 dark:text-slate-200 dark:border-slate-700 dark:hover:bg-slate-700 transition">
+                            <i class="far fa-envelope mr-2"></i> Email Saya
+                        </a>
+                    </div>
+
+                    <div class="mt-12 pt-10 border-t border-slate-100 dark:border-slate-800">
+                        <p class="text-sm text-slate-400 dark:text-slate-500 font-medium mb-4">CORE COMPETENCIES</p>
+                        <div class="flex gap-8 text-2xl text-slate-400 dark:text-slate-500">
+                            <i class="fab fa-python hover:text-blue-500 dark:hover:text-blue-400 transition cursor-help" title="Python & AI"></i>
+                            <i class="fab fa-js hover:text-yellow-500 dark:hover:text-yellow-400 transition cursor-help" title="JavaScript"></i>
+                            <i class="fas fa-shield-alt hover:text-green-500 dark:hover:text-green-400 transition cursor-help" title="Cybersecurity"></i>
+                            <i class="fas fa-database hover:text-slate-600 dark:hover:text-slate-300 transition cursor-help" title="Database Management"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 relative flex justify-center lg:justify-end">
+                    <div class="relative w-full max-w-sm rounded-xl bg-white dark:bg-slate-800 p-3 border border-slate-200 dark:border-slate-700 shadow-2xl rotate-1 hover:rotate-0 transition duration-500">
+                        <div class="aspect-[3/4] bg-slate-100 dark:bg-slate-900 rounded-lg overflow-hidden relative">
+                            <img src="image.png" alt="Khaerul Fajri Profile" class="absolute inset-0 w-full h-full object-cover object-top hover:scale-105 transition duration-700">
+                            
+                            <div class="absolute bottom-0 left-0 right-0 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md p-4 border-t border-white/50 dark:border-slate-700">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-sm shadow-md">KF</div>
+                                    <div>
+                                        <p class="text-sm font-bold text-slate-900 dark:text-white">Khaerul Fajri</p>
+                                        <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Founder, Turing Code</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -z-10 top-10 right-4 lg:right-0 w-3/4 h-full bg-blue-100/50 dark:bg-blue-900/20 rounded-xl -rotate-3"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-slate-50 dark:bg-slate-950 py-16 border-y border-slate-200 dark:border-slate-800">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-10 text-center divide-x divide-slate-200/50 dark:divide-slate-800/50">
+                <div>
+                    <div class="text-3xl font-bold text-slate-900 dark:text-white">5+</div>
+                    <div class="text-sm text-slate-500 dark:text-slate-400 mt-2 font-medium">Semester Akademik</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-slate-900 dark:text-white">3</div>
+                    <div class="text-sm text-slate-500 dark:text-slate-400 mt-2 font-medium">Proyek Skala Besar</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-slate-900 dark:text-white">20+</div>
+                    <div class="text-sm text-slate-500 dark:text-slate-400 mt-2 font-medium">Siswa Dididik</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-slate-900 dark:text-white">100%</div>
+                    <div class="text-sm text-slate-500 dark:text-slate-400 mt-2 font-medium">Dedikasi Kerja</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 bg-white dark:bg-slate-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <span class="text-blue-600 dark:text-blue-400 font-semibold text-sm tracking-wider uppercase">Portofolio</span>
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white mt-3 mb-6">Karya & Solusi Digital</h2>
+                <p class="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                    Koleksi proyek yang telah saya bangun, berfokus pada efisiensi bisnis, inovasi AI, dan infrastruktur layanan IT.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-10">
+                
+                <div class="group bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-500 hover:shadow-xl transition duration-300 flex flex-col overflow-hidden">
+                    <div class="h-56 bg-slate-50 dark:bg-slate-900 border-b border-slate-100 dark:border-slate-700 flex items-center justify-center group-hover:bg-blue-50 dark:group-hover:bg-slate-800 transition">
+                        <i class="fas fa-briefcase text-5xl text-slate-300 dark:text-slate-600 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition"></i>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wide mb-3">Business & Services</div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Turing Code Platform</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-1 leading-loose">
+                            Platform layanan freelance independen yang saya dirikan. Mengelola proses <i>end-to-end</i> dari akuisisi klien, branding, hingga delivery solusi IT.
+                        </p>
+                        <a href="#" class="text-sm font-semibold text-slate-900 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 flex items-center mt-auto group-hover:translate-x-1 transition">
+                            Lihat Detail <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="group bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-green-300 dark:hover:border-green-500 hover:shadow-xl transition duration-300 flex flex-col overflow-hidden">
+                    <div class="h-56 bg-slate-50 dark:bg-slate-900 border-b border-slate-100 dark:border-slate-700 flex items-center justify-center group-hover:bg-green-50 dark:group-hover:bg-slate-800 transition">
+                        <i class="fas fa-brain text-5xl text-slate-300 dark:text-slate-600 group-hover:text-green-500 dark:group-hover:text-green-400 transition"></i>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="text-xs font-bold text-green-600 dark:text-green-400 uppercase tracking-wide mb-3">Artificial Intelligence</div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">JKT Property Predictor</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-1 leading-loose">
+                            Sistem prediksi harga properti berbasis Machine Learning (Regresi Linear). Membantu investor menaksir harga pasar yang wajar dengan akurasi tinggi.
+                        </p>
+                        <a href="#" class="text-sm font-semibold text-slate-900 dark:text-slate-200 hover:text-green-600 dark:hover:text-green-400 flex items-center mt-auto group-hover:translate-x-1 transition">
+                            Lihat Detail <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="group bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-purple-300 dark:hover:border-purple-500 hover:shadow-xl transition duration-300 flex flex-col overflow-hidden">
+                    <div class="h-56 bg-slate-50 dark:bg-slate-900 border-b border-slate-100 dark:border-slate-700 flex items-center justify-center group-hover:bg-purple-50 dark:group-hover:bg-slate-800 transition">
+                        <i class="fas fa-laptop-code text-5xl text-slate-300 dark:text-slate-600 group-hover:text-purple-500 dark:group-hover:text-purple-400 transition"></i>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <div class="text-xs font-bold text-purple-600 dark:text-purple-400 uppercase tracking-wide mb-3">Web Application</div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Career Counseling App</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-1 leading-loose">
+                            Aplikasi asesmen karir digital interaktif untuk siswa. Menggabungkan logika pemograman web dengan psikometrik dasar.
+                        </p>
+                        <a href="#" class="text-sm font-semibold text-slate-900 dark:text-slate-200 hover:text-purple-600 dark:hover:text-purple-400 flex items-center mt-auto group-hover:translate-x-1 transition">
+                            Lihat Detail <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-12 text-center">Rekam Jejak Profesional</h2>
+            
+            <div class="space-y-8 relative">
+                <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-slate-200 dark:bg-slate-800 hidden md:block"></div>
+
+                <div class="relative bg-white dark:bg-slate-900 p-8 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition flex flex-col md:flex-row gap-8 md:items-center z-10">
+                    <div class="md:w-1/4">
+                        <span class="text-sm font-mono font-bold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 px-3 py-1 rounded-full border border-blue-100 dark:border-blue-800">Jan 2026 - Now</span>
+                    </div>
+                    <div class="md:w-3/4">
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white">Founder & Lead Developer</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm font-medium">Turing Code Service</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm mt-3 leading-loose">Mendirikan layanan freelance IT, fokus pada pengembangan web bisnis, konsultasi teknis, dan manajemen klien di platform Fiverr.</p>
+                    </div>
+                </div>
+
+                <div class="relative bg-white dark:bg-slate-900 p-8 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition flex flex-col md:flex-row gap-8 md:items-center z-10">
+                    <div class="md:w-1/4">
+                        <span class="text-sm font-mono font-bold text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full border border-slate-200 dark:border-slate-700">2026</span>
+                    </div>
+                    <div class="md:w-3/4">
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white">Warehouse Staff (Freelance)</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm font-medium">Logistics Sector</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm mt-3 leading-loose">Membangun etos kerja disiplin, ketahanan fisik, dan manajemen efisiensi waktu dalam lingkungan operasional bertekanan tinggi.</p>
+                    </div>
+                </div>
+
+                <div class="relative bg-white dark:bg-slate-900 p-8 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition flex flex-col md:flex-row gap-8 md:items-center z-10">
+                    <div class="md:w-1/4">
+                        <span class="text-sm font-mono font-bold text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full border border-slate-200 dark:border-slate-700">Aug 2025 - Now</span>
+                    </div>
+                    <div class="md:w-3/4">
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white">Coding Instructor</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm font-medium">Global Prima Islamic School</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm mt-3 leading-loose">Mengembangkan kurikulum ajar dan membimbing siswa ekstrakurikuler dalam menguasai dasar pemrograman web (HTML, CSS) hingga menjadi portofolio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-slate-900 dark:bg-black text-white py-12 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <h2 class="text-2xl font-bold tracking-tight">Khaerul Fajri</h2>
+                <p class="text-slate-400 text-sm mt-1">Computer Science Student & Founder of Turing Code</p>
+            </div>
+            
+            <div class="flex gap-6">
+                <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-blue-600 transition duration-300">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-gray-700 transition duration-300">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:emailtuan@gmail.com" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-red-600 transition duration-300">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto px-4 mt-8 pt-8 border-t border-slate-800 text-center text-sm text-slate-500">
+            &copy; 2026 Khaerul Fajri. All Rights Reserved. Built with Cyber Resilience.
+        </div>
+    </footer>
+
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const html = document.documentElement;
+
+        // Cek Local Storage atau Preferensi Sistem saat Load
+        if (localStorage.getItem('theme') === 'dark' || 
+            (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        } else {
+            html.classList.remove('dark');
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+        }
+
+        // Fungsi Toggle saat tombol diklik
+        toggleButton.addEventListener('click', () => {
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            }
+        });
+    </script>
+</body>
+</html>
